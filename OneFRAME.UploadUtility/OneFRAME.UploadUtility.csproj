@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B80DA888-D45C-4BDF-94F9-261D64DD1EDD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OneFRAME.UploadUtility</RootNamespace>
+    <AssemblyName>OneFRAME.UploadUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxPro.2">
+      <HintPath>..\CoreDlls\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Bussiness.Template">
+      <HintPath>..\CoreDlls\OneFRAME.Bussiness.Template.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Bussiness.Utility">
+      <HintPath>..\CoreDlls\OneFRAME.Bussiness.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Call.Bussiness.Template">
+      <HintPath>..\CoreDlls\OneFRAME.Call.Bussiness.Template.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Call.Bussiness.Utility">
+      <HintPath>..\CoreDlls\OneFRAME.Call.Bussiness.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Core.Call.Bussiness.Template, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\OneFRAME.Core.Call.Bussiness.Template.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Core.Call.Bussiness.Utility">
+      <HintPath>..\CoreDlls\OneFRAME.Core.Call.Bussiness.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Core.Model">
+      <HintPath>..\Runtime\web\bin\OneFRAME.Core.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.MediaService">
+      <HintPath>..\Runtime\web\bin\OneFRAME.MediaService.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Model">
+      <HintPath>..\CoreDlls\OneFRAME.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.TempService">
+      <HintPath>..\CoreDlls\OneFRAME.TempService.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\OneFRAME.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\OneFRAME.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.WebServiceUtility">
+      <HintPath>..\CoreDlls\OneFRAME.WebServiceUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.WebSession">
+      <HintPath>..\CoreDlls\OneFRAME.WebSession.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS">
+      <HintPath>..\CoreDlls\Spire.XLS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProcessImportHandlerUtility.cs" />
+    <Compile Include="ProcessUploadHandlerUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UploadMediaToServer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) E:\OneFRAME\Runtime\web\bin
+copy $(TargetPath) E:\OneFRAME\CoreDlls
+
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

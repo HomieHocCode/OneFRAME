@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E91D160D-32D2-4673-A4DA-EB120C53D391}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OneFRAME.Gui.Dashboard</RootNamespace>
+    <AssemblyName>OneFRAME.Gui.Dashboard</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxPro.2">
+      <HintPath>..\CoreDlls\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Bussiness.Sql">
+      <HintPath>..\CoreDlls\OneFRAME.Bussiness.Sql.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Bussiness.Template">
+      <HintPath>..\CoreDlls\OneFRAME.Bussiness.Template.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Bussiness.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\OneFRAME.Bussiness.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Call.Bussiness.Sql">
+      <HintPath>..\CoreDlls\OneFRAME.Call.Bussiness.Sql.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Call.Bussiness.Template">
+      <HintPath>..\CoreDlls\OneFRAME.Call.Bussiness.Template.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Call.Bussiness.Utility">
+      <HintPath>..\CoreDlls\OneFRAME.Call.Bussiness.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Call.Bussiness.Ws, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\OneFRAME.Call.Bussiness.Ws.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Core.Call.Bussiness.Template">
+      <HintPath>..\CoreDlls\OneFRAME.Core.Call.Bussiness.Template.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Core.Call.Bussiness.Utility">
+      <HintPath>..\CoreDlls\OneFRAME.Core.Call.Bussiness.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Core.Model">
+      <HintPath>..\CoreDlls\OneFRAME.Core.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Model">
+      <HintPath>..\CoreDlls\OneFRAME.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Utilities">
+      <HintPath>..\CoreDlls\OneFRAME.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Utility">
+      <HintPath>..\CoreDlls\OneFRAME.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="default.dashboard.cs" />
+    <Compile Include="Modules\DashboardModule8.cs" />
+    <Compile Include="Modules\DashboardModule7.cs" />
+    <Compile Include="Modules\DashboardModule6.cs" />
+    <Compile Include="Modules\DashboardModule5.cs" />
+    <Compile Include="Modules\DashboardModule4.cs" />
+    <Compile Include="Modules\DashboardModule3.cs" />
+    <Compile Include="Modules\DashboardModule2.cs" />
+    <Compile Include="Modules\DashboardModule1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) E:\OneFRAME\Runtime\web\bin
+copy $(TargetPath) E:\OneFRAME\CoreDlls
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

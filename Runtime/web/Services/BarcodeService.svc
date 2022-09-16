@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BarcodeService" CodeBehind="~/App_Code/BarcodeService.cs" Factory ="System.ServiceModel.Activation.WebServiceHostFactory"%>

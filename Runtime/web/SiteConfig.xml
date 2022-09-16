@@ -1,0 +1,21 @@
+﻿<XmlConfig>
+  <XmlInfo>
+    <SiteId>online.onenet</SiteId>
+    <AssetCode>online</AssetCode>
+    <PathRoot>E:\OneFRAME\Runtime\web</PathRoot>
+    <HttpRoot>http://localhost:120</HttpRoot>
+    
+    <MediaPathRoot>E:\OneFRAME\medias</MediaPathRoot>
+    <HttpMediaPathRoot>http://localhost:120/media</HttpMediaPathRoot>
+    <XmlConfigFile>{PathRoot}\XmlConfig\Config.xml</XmlConfigFile>
+    <TempPathRoot>{PathRoot}\temp</TempPathRoot>
+    <HttpTempPathRoot>{HttpRoot}/temp</HttpTempPathRoot>
+    <ConnectionString>Data Source=PHAMDUCHIEP;Initial Catalog=OneFRAME;Integrated Security=false;User Id=sa; password=1202; Pooling=true;Max Pool Size=9999999;</ConnectionString>
+	  <WebPort>120</WebPort>
+	  <WebPreviewUrl></WebPreviewUrl>
+    <RootWebServiceUrl></RootWebServiceUrl>
+  </XmlInfo>
+  
+  
+  
+</XmlConfig>

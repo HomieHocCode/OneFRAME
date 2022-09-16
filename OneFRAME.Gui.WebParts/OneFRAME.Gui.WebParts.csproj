@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A349130-12D5-467F-BDAF-435D4EC4BEA7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OneFRAME.Gui.WebParts</RootNamespace>
+    <AssemblyName>OneFRAME.Gui.WebParts</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxPro.2, Version=9.2.17.1, Culture=neutral, PublicKeyToken=50c73aeba215f5a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words, Version=13.7.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Runtime\web\Bin\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="FlexCel, Version=6.3.0.0, Culture=neutral, PublicKeyToken=cb8f6080e6d5a4d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\FlexCel.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.CallTempService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Runtime\web\bin\OneFRAME.CallTempService.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.ChatUtility">
+      <HintPath>..\CoreDlls\OneFRAME.ChatUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.CheckPermissionUtility">
+      <HintPath>..\CoreDlls\OneFRAME.CheckPermissionUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Core.BarcodeLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Runtime\web\bin\OneFRAME.Core.BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Core.Call.Bussiness.Template, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\OneFRAME.Core.Call.Bussiness.Template.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Core.Call.Bussiness.Utility">
+      <HintPath>..\CoreDlls\OneFRAME.Core.Call.Bussiness.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Core.Gui.WebParts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Runtime\web\bin\OneFRAME.Core.Gui.WebParts.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Core.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\OneFRAME.Core.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Database.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b6ee3c81ce7aaf6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\OneFRAME.Database.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.ProcessCommand">
+      <HintPath>..\CoreDlls\OneFRAME.ProcessCommand.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.ReportUtility">
+      <HintPath>..\CoreDlls\OneFRAME.ReportUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.SpeechUtility">
+      <HintPath>..\CoreDlls\OneFRAME.SpeechUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.TempService">
+      <HintPath>..\CoreDlls\OneFRAME.TempService.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.UploadUtility">
+      <HintPath>..\CoreDlls\OneFRAME.UploadUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Utilities">
+      <HintPath>..\CoreDlls\OneFRAME.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\OneFRAME.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.WebRender">
+      <HintPath>..\CoreDlls\OneFRAME.WebRender.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.WebServiceUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\OneFRAME.WebServiceUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="OneFRAME.WebSession, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CoreDlls\OneFRAME.WebSession.dll</HintPath>
+    </Reference>
+    <Reference Include="OneNet.PubSub.Client">
+      <HintPath>..\Runtime\web\bin\OneNet.PubSub.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\Runtime\web\Bin\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License">
+      <HintPath>..\CoreDlls\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf">
+      <HintPath>..\CoreDlls\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS">
+      <HintPath>..\CoreDlls\Spire.XLS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\Runtime\web\bin\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dictionary\DanhMucQuanHuyen.cs" />
+    <Compile Include="Dictionary\DanhMucTinhThanh.cs" />
+    <Compile Include="Dictionary\DanhMucVungMien.cs" />
+    <Compile Include="Dictionary\DanhMucQuocGia.cs" />
+    <Compile Include="Dictionary\DanhMucICDChuong.cs" />
+    <Compile Include="Dictionary\DanhMucDonViHanhChinh.cs" />
+    <Compile Include="Dictionary\DanhMucXaPhuong.cs" />
+    <Compile Include="RemoteDataService\DanhMucQuanHuyenService.cs" />
+    <Compile Include="RemoteDataService\DanhMucTinhThanhService.cs" />
+    <Compile Include="RemoteDataService\DanhMucQuocGiaService.cs" />
+    <Compile Include="RemoteDataService\DanhMucVungMienService.cs" />
+    <Compile Include="RemoteDataService\DanhMucXaPhuongService.cs" />
+    <Compile Include="RemoteDataService\OwnerUserService.cs" />
+    <Compile Include="Dictionary\Unit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OneFRAME.Bussiness.Template\OneFRAME.Bussiness.Template.csproj">
+      <Project>{91133486-ed5d-4967-b028-2c112ad1b0cc}</Project>
+      <Name>OneFRAME.Bussiness.Template</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OneFRAME.Bussiness.Utility\OneFRAME.Bussiness.Utility.csproj">
+      <Project>{6385f257-bc5d-4511-aabf-3057e73c925b}</Project>
+      <Name>OneFRAME.Bussiness.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OneFRAME.Call.Bussiness.Template\OneFRAME.Call.Bussiness.Template.csproj">
+      <Project>{2e84367a-6d3f-4f87-9c31-b9896abb6aed}</Project>
+      <Name>OneFRAME.Call.Bussiness.Template</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OneFRAME.Call.Bussiness.Utility\OneFRAME.Call.Bussiness.Utility.csproj">
+      <Project>{591f1d29-dc14-4397-9fb6-5a67a3b4dbd5}</Project>
+      <Name>OneFRAME.Call.Bussiness.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OneFRAME.Model\OneFRAME.Model.csproj">
+      <Project>{69c9d595-0157-4618-a501-cac1a4ec3525}</Project>
+      <Name>OneFRAME.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OneFRAME.ProcessCommand\OneFRAME.ProcessCommand.csproj">
+      <Project>{9592A462-136B-4E11-860F-880B2249E51D}</Project>
+      <Name>OneFRAME.ProcessCommand</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\BC\" />
+    <Folder Include="Report\PH\" />
+    <Folder Include="Utility\" />
+    <Folder Include="WebPartPartial\" />
+    <Folder Include="WebPart\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) E:\OneFRAME\Runtime\web\bin
+copy $(TargetPath) E:\OneFRAME\CoreDlls
+
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
